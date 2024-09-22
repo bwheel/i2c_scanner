@@ -11,32 +11,46 @@ It uses the [platformio](https://platformio.org/) build system to run.
 
 ## How To... 
 
-
 ### Build
 
-`pio run --environment <environment name>`
+``` bash
+pio run --environment <environment name>
+```
 
-_Example:_ `pio run --environment esp32doit-devkit-v1`
+_Example:_
+
+``` bash
+pio run --environment esp32doit-devkit-v1
+```
 
 _NOTE: You can find/add additional environments in the `platformio.ini` file._
 
 ### Upload
 
-`pio run --target upload --environment <environment name> --upload-port <port number>`
+``` bash
+pio run --target upload --environment <environment name> --upload-port <port number>
+```
 
-_Example:_ `pio run -t upload -e esp32doit-devkit-v1 --upload-port COM3`
+_Example:_
+
+``` bash
+pio run -t upload -e esp32doit-devkit-v1 --upload-port COM3
+```
 
 >NOTE: You can find the available port numbers with
+
 ```bash
 pio device list
 ```
 
 ### Monitor
+
 ``` bash
 pio device monitor --port <port number>
 ```
 
 _Example:_
+
 ``` bash
 pio device monitor --port COM3
 ```
